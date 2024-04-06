@@ -1,0 +1,146 @@
+.iphone-container {
+  position: relative;
+  display: flex;
+}
+
+.iphone {
+  z-index: 2;
+}
+
+.iphone-container .iphone .img-box {
+  position: absolute;
+  width: 269px;
+  height: 585px;
+  top: 19px;
+  left: 23.575px;
+  z-index: -1;
+  background-image: url("http://localhost:3000/img/mobileWebsite.jpeg");
+  background-position: top;
+  background-size: 100%;
+  transition: 5s;
+}
+
+.iphone-container .iphone:hover .img-box {
+  background-position: bottom;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(40deg, #ff43c0 0%, #ffa95c 100%);
+}
+
+.inner {
+  width: 91%;
+  height: 91%;
+  box-shadow: 0px 20px 40px 0px rgba(255, 118, 142, 0.3);
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inner h3,
+.inner p {
+  margin: 0;
+}
+
+.inner h3 {
+  color: #2a2833;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1rem;
+}
+
+.inner p {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  font-weight: 500;
+  color: #74727a;
+  line-height: 1em;
+  margin-top: 15px;
+}
+
+.cell:nth-child(1) .inner {
+  box-shadow: inset 0px 20px 20px 0px rgba(255, 118, 142, 0.3);
+}
+.cell:nth-child(1) {
+  box-shadow: 0px 20px 20px 0px rgba(255, 118, 142, 0.3);
+}
+.cell:nth-child(2) .inner {
+  box-shadow: inset 0px 20px 20px 0px rgba(141, 142, 255, 0.3);
+}
+.cell:nth-child(2) {
+  background-image: linear-gradient(40deg, #0db8ff 0%, #f332ff 100%);
+  box-shadow: 0px 20px 20px 0px rgba(141, 142, 255, 0.3);
+}
+.cell:nth-child(3) .inner {
+  box-shadow: inset 0px 20px 20px 0px rgba(58, 212, 173, 0.3);
+}
+.cell:nth-child(3) {
+  background-image: linear-gradient(40deg, #39a3ff 0%, #3cff53 100%);
+  box-shadow: 0px 20px 20px 0px rgba(58, 212, 173, 0.3);
+}
+
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.about-text {
+  font-size: 22px;
+  width: 70%;
+  margin-top: 30px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    background-color: #1c1e21;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .about-content {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .counter {
+    flex-wrap: wrap;
+  }
+  .iphone-container {
+    margin-bottom: 35px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .about {
+    height: calc(100vh - 106px);
+  }
+}
+
+.about-description {
+  animation: part-2 1.5s ease;
+}
+
+.iphone-container {
+  animation: part-1 1.5s ease;
+}

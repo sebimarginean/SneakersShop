@@ -1,0 +1,361 @@
+.presentation {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 106px);
+}
+
+.introduction {
+  flex: 1;
+}
+
+.intro-text h1 {
+  font-size: 44px;
+  background: linear-gradient(to right, #e71c3d, #574240);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 25px;
+  color: white;
+  width: 70%;
+}
+
+.cta {
+  padding: 30px 0px 0px 0px;
+}
+
+.cta-select {
+  border: 2px solid #195999;
+  background: transparent;
+  color: white;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.cta-view {
+  background: #195999;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 30px 0px 0px 30px;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.bounce {
+  height: 420px;
+  width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.7s;
+  img {
+    filter: drop-shadow(5px 8px 10px black);
+    animation: drop 1.5s ease;
+    height: 450px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.scroll {
+  position: fixed;
+  bottom: 0px;
+}
+
+.questions {
+  display: inline-block;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+  border-bottom: 5px solid #195999;
+}
+
+@media screen and (max-width: 1024px) {
+  .presentation {
+    flex-direction: column;
+  }
+  .introduction {
+    margin-top: 3.8rem;
+    text-align: center;
+  }
+  .intro-text h1 {
+    font-size: 30px;
+  }
+  .intro-text p {
+    font-size: 18px;
+  }
+  .cta {
+    padding: 10px 0px 0px 0px;
+  }
+}
+.white {
+  background-color: rgb(255, 255, 255);
+}
+
+.dark {
+  background-color: #1c1e21;
+}
+.colors-combine {
+  background: linear-gradient(to bottom, transparent 72%, #fff 100%),
+    linear-gradient(70deg, #81acf4 62%, #bea5a9 28%);
+  height: 100vh;
+  .about-text,
+  .contact-h,
+  .all-form {
+    color: white;
+  }
+  .about-description h1 {
+    color: white;
+  }
+  .send-message {
+    background-color: #bea5a9;
+  }
+  #submit {
+    background-color: #81acf4;
+  }
+  .content a {
+    color: black;
+  }
+  .full-footer {
+    background-color: #bea5a9;
+  }
+}
+
+.colors-combine-dark {
+  background: linear-gradient(to bottom, transparent 60%, #1c1e21 100%),
+    linear-gradient(70deg, #18191a 62%, #593d88 28%);
+  height: 100vh;
+  color: #fff;
+}
+
+.description {
+  letter-spacing: 0.08rem;
+  line-height: 2rem;
+}
+
+.component {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 130px;
+}
+
+.last-h {
+  display: flex;
+  justify-content: center;
+}
+
+.comp-text {
+  width: 70%;
+}
+
+.comp-text:nth-child(1) {
+  animation: part-2 1.5s ease;
+}
+
+.comp-text:nth-child(2) {
+  animation: part-1 1.5s ease;
+}
+
+.last-comp {
+  margin-top: 120px;
+}
+.container {
+  animation: top-low 1.5s ease;
+}
+.component p {
+  font-weight: 300;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+#img-1 {
+  animation: part-2 1.5s ease;
+}
+#img-2 {
+  animation: part-1 1.5s ease;
+}
+
+@keyframes part-1 {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes part-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes top-low {
+  0% {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+.image-steps {
+  background-color: #18191a;
+  border-radius: 50%;
+  padding: 55px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: padding 0.2s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.container {
+  padding-bottom: 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.container .card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container .card .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(400px);
+  transition: 0.5s;
+}
+.container .card:hover .content {
+  transform: translateY(25px);
+}
+.card:hover .image-steps {
+  padding: 10px;
+  transform: translateY(-115px) translateX(-50%);
+}
+
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+//section animation
+@media only screen and (max-width: 1024px) {
+  .component:nth-child(1) {
+    flex-direction: column-reverse;
+  }
+  .component:nth-child(2) {
+    flex-direction: column;
+  }
+  .intro-text p {
+    width: 100%;
+    font-size: 25px;
+  }
+  .comp-text {
+    padding-top: 30px;
+  }
+
+  .component img {
+    margin-top: 70px;
+  }
+
+  .bounce img {
+    margin-bottom: 150px;
+  }
+  .intro-text h1 {
+    font-size: 44px;
+  }
+  .questions {
+    position: relative;
+    // Move the element to the left by 50% of the container's width
+    left: 50%;
+    // Calculates 50% of the element's width, and moves it by that
+    // amount across the X-axis to the left
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .introduction {
+    margin-top: 0;
+  }
+  .bounce img {
+    display: none;
+  }
+
+  .component img {
+    height: 190px;
+  }
+  .bounce {
+    width: 0;
+  }
+  .component {
+    padding-top: 50px;
+  }
+  .comp-text {
+    width: 85%;
+  }
+  .cta {
+    display: flex;
+    flex-direction: column;
+    button {
+      margin: 0;
+      margin-top: 20px;
+    }
+  }
+  .cta-select,
+  .cta-view {
+    width: 180px;
+    height: 50px;
+  }
+  .presentation {
+    flex-direction: row;
+  }
+}

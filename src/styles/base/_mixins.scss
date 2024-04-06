@@ -1,0 +1,32 @@
+@mixin display-flex($property, $value) {
+  display: flex;
+  #{$property}: #{$value};
+}
+
+@mixin just-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin dark-mode($property) {
+  @if $property {
+    transform: translateX(24px);
+  } @else {
+    transform: translateX(-24px);
+  }
+}
+
+@mixin contact {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(219, 219, 219);
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+  width: 70%;
+  height: 10%;
+  margin-top: 20px;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
